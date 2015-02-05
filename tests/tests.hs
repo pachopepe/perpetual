@@ -13,7 +13,7 @@ getRules file = do Right (RulesEnv v rs) <- parseFile file
 
 usaRules = getRules "Rules/usRules.txt"
 
-churchRules = getRules "Rules.txt"
+churchRules = getRules "Rules/churchRules.txt"
 
 usEx dt = matchRules <$> usaRules <*> return dt
         

@@ -287,7 +287,6 @@ parseEnv :: Parser RulesEnv
 parseEnv = do many parseCalendarTerm
               getState
               
-
 parseOnly:: Parser a -> T.Text -> Either ParseError a
 parseOnly p s = runParser p (RulesEnv [] []) "unknown" s 
 
@@ -329,14 +328,4 @@ parseOnly (parseCalendarRule) $ T.pack "Holiday every 4 years since January 20, 
 parseOnly (parseCalendarRule) $ T.pack "Holiday every 4 years since 1/20/1937 'inaguration day'"
 
 -}
-
-
-usaRules = do Right (RulesEnv v rs) <- parseFile "usaRules.txt"
-              return (RulesEnv v (mergeSort rs))
-
-iglRules = do Right (RulesEnv v rs) <- parseFile "reglasIglesia.txt"
-              return (RulesEnv v (mergeSort rs))
-
-
-ex dt = matchRules <$> usaRules <*> return dt
         
