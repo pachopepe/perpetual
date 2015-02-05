@@ -1,0 +1,24 @@
+Holiday "New Year's Eve" January 1, *
+Holiday "Martin Luther King Day" 3rd Monday after January 1, *
+Holiday "Inauguration Day" every 4 years since January 20, 1937
+Holiday "Presidents's Day" 3rd Monday after February 1, *
+Holiday "Armed Forces Day" 3rd Sunday after May 1, *
+Holiday "Memorial Day" last Monday in May *
+Holiday "Flag Day" June 14, *
+Holiday "Independence Day" July 4, *
+Holiday "Labor Day" first Monday after September 1, *
+Holiday "Columbus Day" 2nd Monday after October 1, *
+Holiday "Election Day" Tuesday after November 2, *
+Holiday "Veteran's Day" Monday after November 11, *
+Holiday "Thanksgiving Day" 4th Thursday after November 1, *
+Remark "Day After Thanksgiving Day" 4th Friday after November 1, *
+Holiday "Christmas Day" December 25, *
+Remark "Monday remark" Monday after every 7 days since January 1, *
+Remark "Last month day" last day of * *
+Non-business "Vacations" {Monday .. Sunday} from December 23, * to December 31, *
+Non-business "Vacations" {Monday .. Sunday} from January 1, * to January 3, *
+Non-business "Weekend" Saturday after *
+Non-business "Weekend" Sunday after *
+Special schedule "Last Friday" [8:00 - 12:00] last Friday in * *
+Special schedule "Easter days" [8:00 - 12:00] {Monday .. Friday} from Thursday before Easter * to Wednesday after Easter *
+Business schedule [8:00 - 12:30pm; 2:00pm - 6:00pm] {Monday .. Friday} from January 1, * to December 31, *

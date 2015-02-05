@@ -1,0 +1,40 @@
+name:              perpetual
+version:           0.0.1
+-- license:           PROP
+-- license-file:      LICENSE
+author:            Francisco Cháves
+maintainer:        Francisco Cháves
+synopsis:          Perpetual Gregorian Calendar based on rules 
+description:       I implement a perpetual calendar 
+                   based on rules patterns that appliad to an specific date
+category:          Calendar, DSL.
+stability:         Experimental
+cabal-version:     >= 1.8
+build-type:        Simple
+
+source-repository head
+  type:     git
+  location: https://pachopepe@bitbucket.org/pachopepe/perpetual.git
+
+library
+  build-depends:      base >= 4 && < 5,
+                      parsec >= 3 && < 4,
+                      ghc-prim >= 0.3 && < 0.4,
+                      containers >= 0.5 && < 0.6,
+                      time,
+                      text
+  exposed-modules:    Perpetual.DateTerm
+                      Perpetual.ScheduleTerm
+                      Perpetual.ScheduleParser                      
+  hs-source-dirs:     src
+  extensions:         DoAndIfThenElse
+
+test-suite tests
+  hs-source-dirs: tests
+  main-is: tests.hs
+  Type: exitcode-stdio-1.0
+  build-depends:       base >= 4 && < 5,
+                       perpetual == 0.*,
+                       QuickCheck >= 2 && < 3,
+                       test-framework >= 0 && < 1,
+                       test-framework-quickcheck2 >= 0 && < 1

@@ -1,0 +1,29 @@
+Holiday "Año nuevo" January 1, *
+Holiday "Dia del trabajo" May 1, *
+Holiday "Grito de independencia" July 20, *
+Holiday "Batalla de Boyaca" August 7, *
+Holiday "Inmaculada Concepcion" December 8, *
+Holiday "Navidad" December 25, *
+Holiday "Jueves santo" Thursday before Easter *
+Holiday "Viernes santo" Friday before Easter *
+Holiday "Reyes" Monday after January 6, *
+Holiday "San Jose" Monday after March 19, *
+Holiday "San Pedro y San Pablo" Monday after June 29, *
+Holiday "Asuncion de la Virgen" Monday after August 15, *
+Holiday "Dia de la raza" Monday after October 12, *
+Holiday "Todos los Santos" Monday after November 1, *
+Holiday "Independencia de Cartagena" Monday after November 11, * 
+Holiday "Ascension de Jesus" Easter * + 43 days
+Holiday "Corpus Christi" Easter * + 64 days
+Holiday "Sagrado Corazon" Easter * + 71 days
+Remark "Ultimo dia del mes" last day of * *
+Non-business "Dia del armisticio" November 11, * 
+Non-business "Vacaciones de fin de año" {Monday .. Friday} from December 15, * to December 31, * 
+Non-business "Vacaciones de fin de año" {Monday .. Friday} from January 1, * to January 6, *
+Non-business "Sabado" Saturday after *
+Non-business "Domingo" Sunday after *
+Holiday schedule 
+Special schedule "Ultimo viernes de mes" [8:00am-12:00pm] Friday before last day of * *
+Special schedule "Horario de semana Santa" [8:00am-12:00pm] {Monday .. Friday} from Monday before Easter * to Wednesday before Easter *
+Business schedule [8:00 am - 12:00pm;2:00 pm - 5:00pm] {Monday .. Wednesday} from January 1, * to December 31, *
+Business schedule [10:00 am - 12:00pm;2:00 pm - 8:00pm] {Thursday .. Friday} from January 1, * to December 31, *
