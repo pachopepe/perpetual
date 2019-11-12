@@ -112,3 +112,6 @@ matchRules (RulesEnv env rules) dt0 = matchRules' rules (CalendarValue dt' Nothi
         Right dt' = getDateVar defaultDateIdentifier ctx0
         ctx = foldr (\(v,dp) m -> either (const m) (flip (M.insert v) m . getDateValueFromDate) $ evalDatePattern dp m) ctx0 env 
 
+
+smatchRules :: RulesEnv -> Date -> CalendarValue
+smatchRules (RulesEnv env rules) dt0 = matchRules (RulesEnv env $ mergeSort rules) dt0

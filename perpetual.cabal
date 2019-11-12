@@ -1,12 +1,12 @@
 name:              perpetual
 version:           0.0.1
--- license:           PROP
--- license-file:      LICENSE
+license:           BSD3
+license-file:      LICENSE
 author:            Francisco Cháves
 maintainer:        Francisco Cháves
 synopsis:          Perpetual Gregorian Calendar based on rules 
-description:       I implement a perpetual calendar 
-                   based on rules patterns that appliad to an specific date
+description:       Perpetual calendar based on rules patterns 
+                   that can be applied to dates
 category:          Calendar, DSL.
 stability:         Experimental
 cabal-version:     >= 1.8

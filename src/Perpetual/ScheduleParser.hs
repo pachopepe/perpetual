@@ -295,26 +295,26 @@ parseFile path = parseOnly (parseEnv) <$> T.readFile path
 
 
 {-
-parseOnly (parseDatePattern) $ T.pack "January 12, 1994"
-parseOnly (parseDatePattern) $ T.pack "12/15/1994"
-parseOnly (parseDatePattern) $ T.pack "* 15, *"
-parseOnly (parseDatePattern) $ T.pack "*/15/*"
-parseOnly (parseDatePattern) $ T.pack "easter *"
-parseOnly (parseDatePattern) $ T.pack "Monday after January 3, 1994"
-parseOnly (parseDatePattern) $ T.pack "Monday after January *, *"
-parseOnly (parseDatePattern) $ T.pack "10 days after easter 1994"
-parseOnly (parseDatePattern) $ T.pack "first day of January *"
-parseOnly (parseDatePattern) $ T.pack "first Monday in January *"
-parseOnly (parseDatePattern) $ T.pack "last day of * *"
-parseOnly (parseDatePattern) $ T.pack "last Monday in January *"
-parseOnly (parseDatePattern) $ T.pack "third Monday after 01/1/1994"
-parseOnly (parseDatePattern) $ T.pack "4th Monday after 01/1/1994"
-parseOnly (parseDatePattern) $ T.pack "every year since 1/1/1994"
-parseOnly (parseDatePattern) $ T.pack "every 4 years since 1/1/1994"
-parseOnly (parseDatePattern) $ T.pack "every month since 1/1/1994"
-parseOnly (parseDatePattern) $ T.pack "every 2 months since 1/1/1994"
-parseOnly (parseDatePattern) $ T.pack "every day since 1/1/1994"
-parseOnly (parseDatePattern) $ T.pack "every 30 days since 1/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "January 12, 1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "12/15/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "* 15, *"
+parseOnly (parseSimpleDatePattern) $ T.pack "*/15/*"
+parseOnly (parseSimpleDatePattern) $ T.pack "easter *"
+parseOnly (parseSimpleDatePattern) $ T.pack "Monday after January 3, 1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "Monday after January *, *"
+parseOnly (parseSimpleDatePattern) $ T.pack "10 days after easter 1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "first day of January *"
+parseOnly (parseSimpleDatePattern) $ T.pack "first Monday in January *"
+parseOnly (parseSimpleDatePattern) $ T.pack "last day of * *"
+parseOnly (parseSimpleDatePattern) $ T.pack "last Monday in January *"
+parseOnly (parseSimpleDatePattern) $ T.pack "third Monday after 01/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "4th Monday after 01/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "every year since 1/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "every 4 years since 1/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "every month since 1/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "every 2 months since 1/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "every day since 1/1/1994"
+parseOnly (parseSimpleDatePattern) $ T.pack "every 30 days since 1/1/1994"
 parseOnly (parseAddDatePattern) $ T.pack "January 12, 1994 - 3 days"
 
 parseOnly (parseCalendarRule) $ T.pack "Holiday January 1, * 'Maria mother of God'"
@@ -326,6 +326,12 @@ parseOnly (parseCalendarRule) $ T.pack "schedule since January 20, * to June 20,
 
 parseOnly (parseCalendarRule) $ T.pack "Holiday every 4 years since January 20, 1937 'Inaguration Day'" 
 parseOnly (parseCalendarRule) $ T.pack "Holiday every 4 years since 1/20/1937 'inaguration day'"
-
 -}
-        
+
+{-
+Examples MatchRule:
+
+matchRules  <$> (either (const $ error "Error") id <$> (parseFile "Rules/churchRules.txt")) <*> return (2015,7,19)
+smatchRules  <$> (either (const $ error "Error") id <$> (parseFile "Rules/churchRules.txt")) <*> return (2015,7,19)
+
+-}        
