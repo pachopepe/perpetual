@@ -4,16 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 23a6ad7981d974dd930fecfcf426b1495a5a7d88bc235ea44a45927107b24f2e
+-- hash: 8d27c128908dc221b0d54b7baac3d2d2779e43e26d6bb8540c22f808137f3075
 
 name:           perpetual
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/perpetual#readme>
 homepage:       https://github.com/githubuser/perpetual#readme
 bug-reports:    https://github.com/githubuser/perpetual/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2019 Author name here
+author:         Francisco Chaves
+maintainer:     pachopepe@gmail.com
+copyright:      2019 Francisco Chaves
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
